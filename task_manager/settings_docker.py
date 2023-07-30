@@ -82,8 +82,8 @@ DATABASES = {
         'NAME': 'todobase',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 

@@ -16,5 +16,8 @@ RUN chmod +x /usr/local/bin/wait-for-it.sh
 
 COPY . /app/
 
+# Переименование файла settings_docker.py в settings.py
+RUN mv task_manager/settings_docker.py task_manager/settings.py
+
 # Ожидание запуска базы данных и выполнение миграций
 CMD ["bash", "-c", "/usr/local/bin/wait-for-it.sh db:5432 -- python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
