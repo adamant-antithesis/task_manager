@@ -9,7 +9,6 @@ COPY requirements.txt /app/
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Установим wait-for-it
 RUN apt-get update && apt-get install -y wget
 RUN wget -O /usr/local/bin/wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh
 RUN chmod +x /usr/local/bin/wait-for-it.sh
