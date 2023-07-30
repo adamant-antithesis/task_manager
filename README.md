@@ -74,7 +74,8 @@ python manage.py migrate
                                                               API ENDPOINTS
 
 1. Доступ к административной панели Django.
-                                                     GET /admin/
+
+        ----GET /admin/
 
 Полная ссылка: http://127.0.0.1:8000/admin/
 Описание: Административный интерфейс Django. В браузере перейдите по ссылке и аутентифицируйтесь по данным супер-пользователя.
@@ -82,7 +83,8 @@ python manage.py migrate
 
 
 2. Модель User
-                                                    POST /api/users/
+
+        ----POST /api/users/
 
 Полная ссылка: http://127.0.0.1:8000/api/users/
 Описание: Создание нового пользователя.
@@ -100,7 +102,7 @@ python manage.py migrate
 
 3.Аутентификация
 
-                                                                POST /api/token/
+      ----POST /api/token/
 
 Полная ссылка: http://127.0.0.1:8000/api/token/
 Описание: Получение токена доступа.
@@ -114,7 +116,7 @@ python manage.py migrate
 }
 
 
-                                                                POST /api/token/refresh/
+      ----POST /api/token/refresh/
 
 Описание: Обновление токена доступа.
 Функция: Обновляет и предоставляет новый токен доступа на основе предыдущего.
@@ -127,7 +129,8 @@ Refresh получается авторизованным пользовател
 }
 
 4.Модель Task
-                                                                GET /api/tasks/
+
+      ----GET /api/tasks/
 
 Полная ссылка: http://127.0.0.1:8000/api/tasks/
 Описание: Получение списка задач.
@@ -138,7 +141,7 @@ Refresh получается авторизованным пользовател
 Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
-                                                                POST /api/tasks/
+      ----POST /api/tasks/
 
 Полная ссылка: http://127.0.0.1:8000/api/tasks/
 Описание: Создание новой задачи. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
@@ -154,7 +157,7 @@ Refresh получается авторизованным пользовател
 }
 
 
-                                                                GET /api/tasks/int:pk/
+      ----GET /api/tasks/int:pk/
 
 http://127.0.0.1:8000/api/tasks/int:pk/
 Описание: Получение деталей задачи по идентификатору.
@@ -164,8 +167,7 @@ http://127.0.0.1:8000/api/tasks/int:pk/
 
 Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
-
-                                                                PUT /api/tasks/int:pk/
+      ----PUT /api/tasks/int:pk/
 
 Полная ссылка: http://127.0.0.1:8000/api/tasks/int:pk/
 Описание: Обновление задачи. Изменение доступно только автору задачи.
@@ -180,7 +182,7 @@ http://127.0.0.1:8000/api/tasks/int:pk/
     "user" "Укажите свой id который получили при создании пользователя"
 }
 
-                                                                PATCH /api/tasks/int:pk/
+      ----PATCH /api/tasks/int:pk/
 
 Полная ссылка: http://127.0.0.1:8000/api/tasks/int:pk/
 Описание: Частичное обновление задачи. Изменение доступно только автору задачи.
@@ -195,7 +197,7 @@ http://127.0.0.1:8000/api/tasks/int:pk/
 }
 
 
-                                                                DELETE /api/tasks/int:pk/
+      ----DELETE /api/tasks/int:pk/
 
 Полная ссылка: http://127.0.0.1:8000/api/tasks/int:pk/
 Описание: Удаление задачи. Удаление доступно только автору задачи.
@@ -206,7 +208,7 @@ http://127.0.0.1:8000/api/tasks/int:pk/
 Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
-                                                                GET /api/user-tasks/
+      ----GET /api/user-tasks/
 
 Полная ссылка: http://127.0.0.1:8000/api/user-tasks/
 Описание: Получение списка задач текущего пользователя.
@@ -217,7 +219,7 @@ http://127.0.0.1:8000/api/tasks/int:pk/
 Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
-                                                                PUT /api/tasks/int:pk/complete/
+      ----PUT /api/tasks/int:pk/complete/
 
 Полная ссылка: http://127.0.0.1:8000/api/tasks/int:pk/complete/
 Описание: Пометить задачу как завершенную.
@@ -226,7 +228,7 @@ http://127.0.0.1:8000/api/tasks/int:pk/
 Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
-                                                                GET /api/tasks/status/str:status/
+      ----GET /api/tasks/status/str:status/
 
 Полная ссылка: http://127.0.0.1:8000/api/tasks/status/str:status/
 Описание: Получение списка задач по статусу.
@@ -237,3 +239,4 @@ http://127.0.0.1:8000/api/tasks/int:pk/
 Варианты статусов в ссылке: new, actual, completed
 
 Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
+
