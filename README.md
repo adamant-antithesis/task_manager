@@ -74,7 +74,7 @@ python manage.py migrate
                                                               API ENDPOINTS
 
 1. Доступ к административной панели Django.
-   GET /admin/
+                                                     GET /admin/
 
 Полная ссылка: http://127.0.0.1:8000/admin/
 Описание: Административный интерфейс Django. В браузере перейдите по ссылке и аутентифицируйтесь по данным супер-пользователя.
@@ -82,7 +82,7 @@ python manage.py migrate
 
 
 2. Модель User
-                                                                POST /api/users/
+                                                    POST /api/users/
 
 Полная ссылка: http://127.0.0.1:8000/api/users/
 Описание: Создание нового пользователя.
