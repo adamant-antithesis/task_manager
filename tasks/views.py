@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import User, Task
 from .serializers import UserSerializer, TaskSerializer
-from .permissions import IsOwnerOrReadOnly
+from .permissions import IsOwnerOrReadOnly, IsOwnerOrReadOnlyTask
 
 
 class UserCreateView(generics.CreateAPIView):
@@ -39,8 +39,16 @@ class UserTaskListView(generics.ListAPIView):
 
 
 class TaskCompleteView(APIView):
+    permission_classes = [IsOwnerOrReadOnlyTask]  # Добавляем кастомный разрешающий класс
+
     def put(self, request, pk):
         task = Task.objects.get(pk=pk)
+
+        # Проверяем, что текущий пользователь является владельцем задачи
+        if task.user != request.user:
+            return Response({'error': 'You do not have permission to complete this task.'},
+                            status=status.HTTP_403_FORBIDDEN)
+
         task.status = 'Completed'
         task.save()
         return Response({'status': 'completed'}, status=status.HTTP_200_OK)

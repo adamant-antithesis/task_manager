@@ -9,3 +9,13 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
         # При запросах на запись (POST, PUT, DELETE) проверяем, что пользователь - владелец задачи.
         return obj.user == request.user
+
+
+class IsOwnerOrReadOnlyTask(permissions.BasePermission):
+    def has_object_permission(self, request, view, obj):
+        # Разрешаем GET, HEAD, OPTIONS запросы всем пользователям
+        if request.method in permissions.SAFE_METHODS:
+            return True
+
+        # Разрешаем PUT запрос только владельцу задачи
+        return obj.user == request.user
