@@ -4,7 +4,7 @@ TodoApp with JWT
 Project "Task Manager" using Django REST Framework
 The "Task Manager" project is a simple web application for task management, built using Django REST Framework (DRF) to create the API. This application allows users to create, view, update, and delete tasks. User authentication is implemented using JWT (JSON Web Token).
 
-                                                                            IMPORTANT!
+                                                  IMPORTANT!
 The project can be deployed in a Docker container or run on a local server.
 
 1)Deployment using Docker:
@@ -79,7 +79,7 @@ python manage.py runserver
 10.Use Postman to access the API endpoints.
 
 
-                                                                              API ENDPOINTS
+                                                  API ENDPOINTS
 1.Access to Django admin panel.
 
 ----GET /admin/
