@@ -16,6 +16,12 @@ class UserSerializer(serializers.ModelSerializer):
             'email': {'required': True},
         }
 
+    def validate_password(self, value):
+        if len(value) < 6:
+            raise serializers.ValidationError("Password must be at least 6 characters long.")
+        return value
+
+
     def validate_username(self, value):
         if User.objects.filter(username=value).exists():
             raise serializers.ValidationError('Username must be unique.')
@@ -41,6 +47,7 @@ class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = ['id', 'title', 'description', 'status', 'user']
+        read_only_fields = ['user']
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
