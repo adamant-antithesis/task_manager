@@ -65,11 +65,13 @@ python manage.py migrate
 7. Создание суперпользователя для управление административной панелью: 
 - python manage.py createsuperuser
 
-8.Запуск сервера: 
+8. Команда для запуска тестов:
+- python manage.py test tasks
+
+9.Запуск сервера: 
 - python manage.py runserver
 
-9.Используйте Postman для доступа к эндпоинтам.
-
+10.Используйте Postman для доступа к эндпоинтам.
 
                                                  API ENDPOINTS
 
