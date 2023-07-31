@@ -127,7 +127,7 @@ Refresh получается авторизованным пользовател
 Данные для передачи:
 
 {
-    "refresh": "refresh"
+    "refresh": "refresh(полученный из ответа POST /api/token/"
 }
 
 4.Модель Task
@@ -155,7 +155,6 @@ Refresh получается авторизованным пользовател
     "title": "title,
     "description": "description",
     "status": "status (Варианты: New, Actual, Completed),
-    "user": "Укажите свой id который получили при создании пользователя"
 }
 
 
@@ -182,7 +181,6 @@ Refresh получается авторизованным пользовател
     "title": "title",
     "description": "description",
     "status": "status(New, Actual, Completed)",
-    "user" "Укажите свой id который получили при создании пользователя"
 }
 
 ----PATCH /api/tasks/int:pk/
