@@ -11,15 +11,15 @@ The project can be deployed in a Docker container or run on a local server.
 
 1.Clone the repository:
 
-  git clone https://github.com/adamant-antithesis/task_manager.git
+    git clone https://github.com/adamant-antithesis/task_manager.git
 
 2.Navigate to the task_manager directory (at the same level as the manage.py file):
 
-  cd task_manager
+    cd task_manager
 
 3.Create and launch the containers using the following command:
 
-  docker-compose up --build
+    docker-compose up --build
 
 4.Use Postman to access the API endpoints.
 
@@ -27,33 +27,33 @@ The project can be deployed in a Docker container or run on a local server.
 
 Requirements
 
-  Python 3.x
-  Django 3.x
-  Django REST Framework (DRF)
-  djangorestframework-simplejwt
-  Installation and Configuration
+    Python 3.x
+    Django 3.x
+    Django REST Framework (DRF)
+    djangorestframework-simplejwt
+    Installation and Configuration
 
 1.Clone the repository:
 
-  git clone https://github.com/adamant-antithesis/task_manager.git
+    git clone https://github.com/adamant-antithesis/task_manager.git
 
 2.Navigate to the task_manager directory (at the same level as the manage.py file):
 
-  cd task_manager
+    cd task_manager
 
 3.Install dependencies:
 
-  pip install -r requirements.txt
+    pip install -r requirements.txt
 
 4.Create a database with the name "todobase":
 
 Access the PostgreSQL shell by using the following command and press Enter:
 
-  psql -U <username> (use the default username - postgres, password - postgres)
+    psql -U <username> (use the default username - postgres, password - postgres)
 
 Once you are in the PostgreSQL shell, create the database "todobase" with the following command:
 
-  CREATE DATABASE todobase;
+    CREATE DATABASE todobase;
 
 5.Exit the PostgreSQL shell:
 
@@ -61,20 +61,20 @@ To exit the PostgreSQL shell, type the command \q and press Enter.
 
 6.Create and apply migrations (you should be in the task_manager directory at the same level as the manage.py file):
 
-  python manage.py makemigrations
-  python manage.py migrate
+    python manage.py makemigrations
+    python manage.py migrate
 
 7.Create a superuser to manage the admin panel:
 
-  python manage.py createsuperuser
+    python manage.py createsuperuser
 
 8.Run tests:
 
-  python manage.py test tasks
+    python manage.py test tasks
 
 9.Start the server:
 
-  python manage.py runserver
+    python manage.py runserver
 
 10.Use Postman to access the API endpoints.
 
