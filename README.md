@@ -154,7 +154,7 @@ Refresh получается авторизованным пользовател
 {
     "title": "title,
     "description": "description",
-    "status": "status (Варианты: New, Actual, Completed),
+    "status": "status (Варианты: New, In Progress, Completed),
 }
 
 
@@ -180,7 +180,7 @@ Refresh получается авторизованным пользовател
 {
     "title": "title",
     "description": "description",
-    "status": "status(New, Actual, Completed)",
+    "status": "status(New, In Progress, Completed)",
 }
 
 ----PATCH /api/tasks/int:pk/
@@ -194,7 +194,7 @@ Refresh получается авторизованным пользовател
 {
     "title": "title",
     "description": "description",
-    "status": "status(New, Actual, Completed)"
+    "status": "status(New, In Progress, Completed)"
 }
 
 
@@ -237,4 +237,4 @@ Refresh получается авторизованным пользовател
 
 Не требует данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
-Варианты статусов в ссылке: new, actual, completed
+Варианты статусов в ссылке: new, in_progress, completed
