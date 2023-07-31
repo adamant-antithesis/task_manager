@@ -140,7 +140,7 @@ Refresh получается авторизованным пользовател
 
 Данные для передачи:
 
-Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
+Не требует данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
 ----POST /api/tasks/
@@ -166,7 +166,7 @@ Refresh получается авторизованным пользовател
 
 Данные для передачи:
 
-Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
+Не требует данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
 ----PUT /api/tasks/int:pk/
@@ -206,7 +206,7 @@ Refresh получается авторизованным пользовател
 
 Данные для передачи:
 
-Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
+Не требует данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
 ----GET /api/user-tasks/
@@ -217,7 +217,7 @@ Refresh получается авторизованным пользовател
 
 Данные для передачи:
 
-Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
+Не требует данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
 ----PUT /api/tasks/int:pk/complete/
@@ -226,7 +226,7 @@ Refresh получается авторизованным пользовател
 Описание: Пометить задачу как завершенную.
 Функция: Меняет статус задачи на "Completed".
 
-Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
+Не требует данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 
 ----GET /api/tasks/status/str:status/
@@ -235,8 +235,6 @@ Refresh получается авторизованным пользовател
 Описание: Получение списка задач по статусу.
 Функция: Возвращает список задач с заданным статусом.
 
-Не требудет данных.
+Не требует данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
 
 Варианты статусов в ссылке: new, actual, completed
-
-Не требудет данных. Требуется аутентификация с токен - Autorization - Bearer Token - {access_token}
