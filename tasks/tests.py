@@ -122,7 +122,7 @@ class AuthenticationTests(APITestCase):
         url = reverse('task-detail', kwargs={'pk': task_id})
         data = {
             "title": "updated_task",
-            "status": "Actual",
+            "status": "Completed",
             "user": self.user.id
         }
         response = self.client.put(url, data)
@@ -131,7 +131,7 @@ class AuthenticationTests(APITestCase):
         self.assertEqual(response.data['id'], task_id)
         self.assertEqual(response.data['title'], 'updated_task')
         self.assertEqual(response.data['description'], '')
-        self.assertEqual(response.data['status'], 'Actual')
+        self.assertEqual(response.data['status'], 'Completed')
         self.assertEqual(response.data['user'], self.user.id)
 
     # PATCH /api/tasks /{task_id}/

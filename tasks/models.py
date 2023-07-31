@@ -16,7 +16,7 @@ class User(models.Model):
 class Task(models.Model):
     STATUS_CHOICES = (
         ('New', 'New'),
-        ('Actual', 'Actual'),
+        ('In Progress', 'In Progress'),
         ('Completed', 'Completed'),
     )
 

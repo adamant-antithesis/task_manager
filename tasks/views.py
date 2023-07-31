@@ -58,5 +58,5 @@ class TaskByStatusListView(generics.ListAPIView):
     serializer_class = TaskSerializer
 
     def get_queryset(self):
-        status_param = self.kwargs['status'].lower()  # Приводим статус к нижнему регистру
+        status_param = self.kwargs['status'].lower().replace('_', ' ')
         return Task.objects.filter(status__iexact=status_param)
