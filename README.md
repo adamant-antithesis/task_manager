@@ -36,7 +36,7 @@ TodoApp with JWT
 1.Клонирование репозитория: 
 - git clone https://github.com/adamant-antithesis/task_manager.git
 
-2.Перейти в каталог task_manager:
+2.Перейти в каталог task_manager(на уровень каталога с файлом manage.py):
 - cd task_manager
 
 3.Установка зависимостей: 
