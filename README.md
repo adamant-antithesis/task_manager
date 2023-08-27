@@ -31,7 +31,8 @@ Requirements
     Django 3.x
     Django REST Framework (DRF)
     djangorestframework-simplejwt
-    Installation and Configuration
+    
+Installation and Configuration
 
 1.Clone the repository:
 
